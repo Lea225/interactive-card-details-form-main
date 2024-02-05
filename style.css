@@ -1,0 +1,175 @@
+
+*{
+    font-family: 'Space Grotesk',sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    position: absolute;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-img{   
+    height: 100vh;
+}
+.card{ 
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 50vh;
+    padding: 20px;
+    position: absolute;
+    color: hsl(270, 3%, 87%);
+    background-repeat: no-repeat;
+    background-image: url('images/bg-card-front.png');
+}
+.card-logo{
+    margin-bottom: 5%;
+}
+.name{
+    display: flex;
+}
+.date{
+    margin-left: 20%;
+}
+.cvc-label{
+    align-self: flex-start;
+}
+.CVC{
+    top: 50%;
+    left: 15%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url('images/bg-card-back.png');
+}
+.cvc-p{
+    top: 29%;
+    left: 35%;
+    color: hsl(0, 0%, 100%);
+    position: absolute;
+}
+form{
+    left: 40%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+.flex-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#cvc{
+    padding-right: 50px;
+}
+#expirationMonth{
+    padding: 15px 20px 5px 20px;
+    width: 10%;
+}
+#expirationYear{
+    padding: 10px 20px 10px 10px;
+    width: 5%;
+    margin-left: -20%;
+    margin-right: 20px;
+}
+.error-div{
+    margin-bottom: 5%;
+    display: block;
+}
+label{
+    margin-top: 5%;
+    padding-bottom: 10px;
+    color: hsl(278, 68%, 11%);
+}
+.label-div{
+    display: flex;
+}
+input{
+    width: 30%;
+    outline: none;
+    padding: 10px 80px 10px 10px;
+    border-radius: 5px;
+    transition: border-color 0.5s ease;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+.input-active {
+    outline: none;
+    box-shadow: 0 0 0 1px hsl(249, 99%, 64%), 0 0 0 1px hsl(278, 94%, 30%);
+}
+input::placeholder{
+    color: hsla(228, 45%, 44%, 0.5);
+}
+#error-message-cardNumber,.error-message-month,.error-message-cvc{
+    display: none;
+    padding-top: 10px;
+    font-size: 0.8em;
+    color: hsl(0, 100%, 66%);
+}
+button{
+    width: 45%;
+    border: none;
+    padding: 10px 100px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+}
+.thanks-div{
+    display: none;
+    margin-left: 100%;
+    text-align: center;
+}
+.thanks-div-h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.thanks-div-p{
+    color: hsl(249, 99%, 64%, 0.5);
+}
+.cta-2{
+    margin-top: 5%;
+    width: 100%;
+}
+@media screen and (max-width: 1000px) {
+    section{
+        padding: 0;
+        display: block;
+    }
+    .left-img{
+        height: 60vh;
+        width: 100%;
+        max-width: 100%;
+    }
+    .card{
+        z-index: 2;
+        top: 26%;
+        left: 3%;
+        background-size: 90%;
+    }
+    .CVC{
+        left: 10%;
+        top: 10%;   
+        z-index: 1;
+        background-size: 80%;
+    }
+    form{
+        left: 0;
+        margin-top: 20%;
+        padding: 0 0 30px 30px;
+        flex-direction: column;
+    }
+    input{
+        padding: 15px 75px;
+    }
+    .cta-1{
+        font-size: 1.1em;
+        padding: 15px 0px;
+        width: 100%;
+    }
+}

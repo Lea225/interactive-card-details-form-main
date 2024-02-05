@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+    
+</head>
+<body>
+
+<section>
+  <div>
+    <img class="left-img" src="images/bg-main-desktop.png" alt="bg-main-desktop">
+  </div>
+  <div class="card">
+    <img class="card-logo" src="images/card-logo.svg" alt="card-logo">
+    <h1>0000 0000 0000 0000</h1>
+    <div class="name">
+      <p class="writer-name">Jane Appleseed</p>
+      <p class="date">00/00</p>
+    </div>
+  </div>
+  
+    <div class="CVC">
+      <p class="cvc-p">000</p>
+    </div>
+  
+    <form action="" method="get">
+          <label for="cardholderName">Cardholder Name</label>
+          <input id="cardholderName" type="text" placeholder="e.g. Jane Appleseed">
+  
+          <label for="cardNumber">Card Number</label>
+          <input id="cardNumber" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+        <div id="error-message-cardNumber">Wrong format, numbers only</div>
+  
+      <div class="label-div">
+        <label for="expirationMonth">Exp. Date (MM/YY)</label> 
+        <label class="cvc-label" for="cvc">CVC</label>
+      </div>
+      <div class="flex-div">
+          <div class="error-div">
+            <input id="expirationMonth" type="number" placeholder="MM">
+            <div class="error-message-month">Can't be blank</div>
+          </div>
+          <input id="expirationYear" type="year" placeholder="YY">
+          <div class="error-div">
+            <input id="cvc" type="text" placeholder="e.g. 123" maxlength="3">
+            <div class="error-message-cvc">Can't be blank</div>
+          </div>
+      </div>
+      <button id="confirmButton" class="cta-1">Confirm</button>
+    </form>
+  
+  
+    <!-- Completed state start -->
+  
+  <div class="thanks-div">
+    <img src="images/icon-complete.svg" alt="icon-complete">
+    <h1 class="thanks-div-h1">Thank you!</h1>
+    <p class="thanks-div-p">We've added your card details</p>
+    <button class="cta-2">Continue</button>
+  </div>
+</section>
+
+</body>
+</html>
